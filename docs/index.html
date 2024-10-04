@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Happy Halloween</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 <body">
-    <h1>Happy Halloween!</h1>
+    <div class="header">
+        <h1>Happy Halloween!</h1>
+    </div>    
     <div class="main">
         <div class="polaroid" style="transform: rotate(3deg);">
             <img class="candy" src="res/candy1.png" alt="Candy1" >
@@ -67,7 +69,12 @@
             </div>
         </div>
     </div>
+    <button onclick="soJoever">It's so Joever</button>
+    <img id="joever" src="res/joever.png" alt="Joever" style="visibility: hidden;">
     <script>
+        function soJoever() {
+            document.getElementById("joever").style.visibility = "visible"
+        }
         // This script is literally just for asthetic purposes. Just rotates the pictures randomly
         function onLoad() {
             const divs = document.querySelectorAll('.main div');

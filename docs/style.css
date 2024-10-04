@@ -1,4 +1,8 @@
-h1 {
+body {
+    background-image: url("res/skel.jpg");    
+}
+
+.header > h1 {
     font-family: "Irish Grover", system-ui;
     font-weight: 800;
     font-style: normal;
@@ -7,11 +11,14 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    text-shadow: 5px 5px #ff6400;
+    color: black;
 }
 
 div.main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 100px;
     gap: 100px;
 }
@@ -23,6 +30,9 @@ div.polaroid {
     margin-bottom: 25px;
 }
 
+div.polaroid:hover {
+    scale: 5;
+}
 
 .candy {
     width: 198px;
@@ -46,7 +56,7 @@ div.polaroid {
     left: 90px;
 }
   
-div.container {
+div.container {    
     text-align: center;
     padding: 10px 20px;
 }
@@ -57,4 +67,10 @@ div.container > p {
     font-weight: 400;
     font-style: normal;
     font-size: 10px;
+}
+
+#joever {
+    position: fixed;
+    height: 2000px;
+    width: 2000px;
 }

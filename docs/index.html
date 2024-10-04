@@ -1,0 +1,91 @@
+<!-- 
+    Alex Keyser
+    CPSC 332
+    10.3.2024 
+
+    Sources for vintage effect and polaroid:
+    https://dev.to/debadeepsen/vintage-photo-effect-with-css-16oj
+    https://www.w3schools.com/css/css3_images.asp
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+</head>
+<body">
+    <h1>Happy Halloween!</h1>
+    <div class="main">
+        <div class="polaroid" style="transform: rotate(3deg);">
+            <img class="candy" src="res/candy1.png" alt="Candy1" >
+            <img class="pin" src="res/pin.png" alt="pin">
+            <div class="container">
+                <p>Dorppasu</p>
+            </div>
+        </div>
+        <div class="polaroid" style="transform: rotate(-20deg);">
+            <img class="candy" src="res/candy2.png" alt="Candy2">
+            <img class="pin" src="res/pin.png" alt="pin">
+            <div class="container">
+                <p>Doromon Uman</p>
+            </div>
+        </div>
+        <div class="polaroid" style="transform: rotate(7deg);">
+            <img class="candy" src="res/candy3.png" alt="Candy3" >
+            <img class="pin" src="res/pin.png" alt="pin">
+            <div class="container">
+                <p>Beazuramuo</p>
+            </div>
+        </div>
+        <div class="polaroid" style="transform: rotate(-5deg);">
+            <img class="candy" src="res/candy4.png" alt="Candy4">
+            <img class="pin" src="res/pin.png" alt="pin">
+            <div class="container">
+                <p>Candybox Hawaii Candy</p>
+            </div>
+        </div>
+        <div class="polaroid" style="transform: rotate(17deg);">
+            <img class="candy" src="res/candy5.png" alt="Candy5" >
+            <img class="pin" src="res/pin.png" alt="pin">
+            <div class="container">
+                <p>Milky</p>
+            </div>
+        </div>
+        <div class="polaroid" style="transform: rotate(-21deg);">
+            <img class="candy" src="res/candy6.png" alt="Candy6">
+            <img class="pin" src="res/pin.png" alt="pin">
+            <div class="container">
+                <p>Chocoball</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // This script is literally just for asthetic purposes. Just rotates the pictures randomly
+        function onLoad() {
+            const divs = document.querySelectorAll('.main div');
+            divs.forEach(div => {
+                const randomRotation = Math.random() * 50 - 25;
+                div.style.transform = `rotate(${randomRotation}deg)`;
+            });
+            const pins = document.querySelectorAll('img.pin');
+    
+            pins.forEach(pin => {
+                const randomTop = Math.random() * 50 - 25;
+                const randomLeft = Math.random() * 40 + 70;
+                pin.style.top = randomTop;     
+                pin.style.left = randomLeft;
+            });
+        }
+
+        window.onload = onLoad; 
+    </script>
+</body>
+</html>

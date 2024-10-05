@@ -2,6 +2,15 @@ body {
     background-image: url("res/skel.jpg");    
 }
 
+.header {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-right: 300px;
+    margin-left: 300px;
+    border-radius: 50px;
+}
+
 .header > h1 {
     font-family: "Irish Grover", system-ui;
     font-weight: 800;
@@ -30,9 +39,16 @@ div.polaroid {
     margin-bottom: 25px;
 }
 
-div.polaroid:hover {
-    scale: 5;
-}
+/* EXTRA CREDIT */
+.polaroid:hover {
+    animation: gelatine 0.5s infinite;
+  }
+  @keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
 
 .candy {
     width: 198px;
@@ -69,8 +85,37 @@ div.container > p {
     font-size: 10px;
 }
 
-#joever {
-    position: fixed;
-    height: 2000px;
-    width: 2000px;
+.footer {
+    display: flex;
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 300px;
+    margin-left: 300px;
+    border-radius: 50px;
+}
+
+.footer > h1 {
+    font-family: "Irish Grover", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 5px 5px #ff6400;
+    color: black;
+}
+
+#leftimg {
+    width: 80px;
+    height: 80px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#rightimg {
+    width: 80px;
+    height: 80px;
 }
